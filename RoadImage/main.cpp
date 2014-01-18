@@ -45,8 +45,8 @@ int main(int argc, char *argv[]) {
 
 			// 道路網が、直交座標系の第一象限に位置するよう、移動する
 			QVector2D offset;
-			offset.setX(std::max<float>(-area.minPt.x(), 0) + margin);
-			offset.setY(std::max<float>(-area.minPt.y(), 0) + margin);
+			offset.setX(-area.minPt.x() + margin);
+			offset.setY(-area.minPt.y() + margin);
 			GraphUtil::translate(patch, offset);
 
 			// cv::Matを作成
