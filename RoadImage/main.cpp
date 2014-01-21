@@ -53,6 +53,9 @@ int main(int argc, char *argv[]) {
 			cv::Mat_<uchar> mat(area.dy() + margin * 2, area.dx() + margin * 2);
 			GraphUtil::convertToMat(patch, mat, mat.size());
 
+			// 1/5に縮小
+			cv::resize(mat, mat, cv::Size(), 0.2, 0.2, cv::INTER_CUBIC);
+
 			// 画像として保存
 			cv::imwrite((basename + "%1.jpg").arg(count).toUtf8().data(), mat);
 
