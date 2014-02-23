@@ -13,90 +13,72 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
+    <Filter Include="mylib">
+      <UniqueIdentifier>{15253de4-12c5-4c50-891f-23939d48dbcb}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="mylib\common">
+      <UniqueIdentifier>{b8a9f187-4809-4b3f-8c74-0177527e6472}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="mylib\road">
+      <UniqueIdentifier>{5bb25612-ec73-49e4-b3cf-d4543b58ca48}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="RoadEdge.cpp">
-      <Filter>Source Files</Filter>
+    <ClCompile Include="..\..\mylib\common\BBox.cpp">
+      <Filter>mylib\common</Filter>
     </ClCompile>
-    <ClCompile Include="RoadGraph.cpp">
-      <Filter>Source Files</Filter>
+    <ClCompile Include="..\..\mylib\common\Polygon2D.cpp">
+      <Filter>mylib\common</Filter>
     </ClCompile>
-    <ClCompile Include="RoadVertex.cpp">
-      <Filter>Source Files</Filter>
+    <ClCompile Include="..\..\mylib\common\Util.cpp">
+      <Filter>mylib\common</Filter>
     </ClCompile>
-    <ClCompile Include="AbstractArea.cpp">
-      <Filter>Source Files</Filter>
+    <ClCompile Include="..\..\mylib\road\GraphUtil.cpp">
+      <Filter>mylib\road</Filter>
     </ClCompile>
-    <ClCompile Include="AbstractForest.cpp">
-      <Filter>Source Files</Filter>
+    <ClCompile Include="..\..\mylib\road\RoadEdge.cpp">
+      <Filter>mylib\road</Filter>
     </ClCompile>
-    <ClCompile Include="ArcArea.cpp">
-      <Filter>Source Files</Filter>
+    <ClCompile Include="..\..\mylib\road\RoadGraph.cpp">
+      <Filter>mylib\road</Filter>
     </ClCompile>
-    <ClCompile Include="BBox.cpp">
-      <Filter>Source Files</Filter>
+    <ClCompile Include="..\..\mylib\road\RoadVertex.cpp">
+      <Filter>mylib\road</Filter>
     </ClCompile>
-    <ClCompile Include="BFSForest.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="BFSTree.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="GraphUtil.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="Renderable.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="RoadGraphRenderer.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="Util.cpp">
-      <Filter>Source Files</Filter>
+    <ClCompile Include="..\..\mylib\common\Renderable.cpp">
+      <Filter>mylib\common</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="RoadEdge.h">
-      <Filter>Header Files</Filter>
+    <ClInclude Include="..\..\mylib\common\BBox.h">
+      <Filter>mylib\common</Filter>
     </ClInclude>
-    <ClInclude Include="RoadGraph.h">
-      <Filter>Header Files</Filter>
+    <ClInclude Include="..\..\mylib\common\common.h">
+      <Filter>mylib\common</Filter>
     </ClInclude>
-    <ClInclude Include="RoadVertex.h">
-      <Filter>Header Files</Filter>
+    <ClInclude Include="..\..\mylib\common\Polygon2D.h">
+      <Filter>mylib\common</Filter>
     </ClInclude>
-    <ClInclude Include="AbstractArea.h">
-      <Filter>Header Files</Filter>
+    <ClInclude Include="..\..\mylib\common\Util.h">
+      <Filter>mylib\common</Filter>
     </ClInclude>
-    <ClInclude Include="AbstractForest.h">
-      <Filter>Header Files</Filter>
+    <ClInclude Include="..\..\mylib\road\GraphUtil.h">
+      <Filter>mylib\road</Filter>
     </ClInclude>
-    <ClInclude Include="ArcArea.h">
-      <Filter>Header Files</Filter>
+    <ClInclude Include="..\..\mylib\road\RoadEdge.h">
+      <Filter>mylib\road</Filter>
     </ClInclude>
-    <ClInclude Include="BBox.h">
-      <Filter>Header Files</Filter>
+    <ClInclude Include="..\..\mylib\road\RoadGraph.h">
+      <Filter>mylib\road</Filter>
     </ClInclude>
-    <ClInclude Include="BFSForest.h">
-      <Filter>Header Files</Filter>
+    <ClInclude Include="..\..\mylib\road\RoadVertex.h">
+      <Filter>mylib\road</Filter>
     </ClInclude>
-    <ClInclude Include="BFSTree.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="GraphUtil.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="Renderable.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="RoadGraphRenderer.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="Util.h">
-      <Filter>Header Files</Filter>
+    <ClInclude Include="..\..\mylib\common\Renderable.h">
+      <Filter>mylib\common</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

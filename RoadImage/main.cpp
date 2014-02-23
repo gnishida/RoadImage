@@ -8,7 +8,7 @@
 #include <iostream>
 #include <opencv/cv.h>
 #include <opencv/highgui.h>
-#include "GraphUtil.h"
+#include <road/GraphUtil.h>
 
 int main(int argc, char *argv[]) {
 	if (argc < 4) {
@@ -35,8 +35,12 @@ int main(int argc, char *argv[]) {
 	int count = 0;
 	for (int y = box.minPt.y(); y <= box.maxPt.y() - cellSize * 0.5; y += cellSize) {
 		for (int x = box.minPt.x(); x <= box.maxPt.x() - cellSize * 0.5; x += cellSize) {
-			BBox area(QVector2D(x, y));
-			area.addPoint(QVector2D(x + cellSize, y + cellSize));
+			BBox bbox;
+			bbox.addPoint(QVector2D(x, y));
+			bbox.addPoint(QVector2D(x + cellSize, y + cellSize));
+
+			Polygon2D area;
+			boost::geometry::convert(bbox, area);
 
 			// パッチの範囲の道路網を抽出
 			RoadGraph patch;
@@ -45,12 +49,12 @@ int main(int argc, char *argv[]) {
 
 			// 道路網が、直交座標系の第一象限に位置するよう、移動する
 			QVector2D offset;
-			offset.setX(-area.minPt.x() + margin);
-			offset.setY(-area.minPt.y() + margin);
+			offset.setX(-bbox.minPt.x() + margin);
+			offset.setY(-bbox.minPt.y() + margin);
 			GraphUtil::translate(patch, offset);
 
 			// cv::Matを作成
-			cv::Mat_<uchar> mat(area.dy() + margin * 2, area.dx() + margin * 2);
+			cv::Mat_<uchar> mat(bbox.dy() + margin * 2, bbox.dx() + margin * 2);
 			GraphUtil::convertToMat(patch, mat, mat.size());
 
 			// 1/5に縮小
